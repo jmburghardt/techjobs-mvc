@@ -35,8 +35,15 @@
     </form>
 
     <hr />
-
+    <h4 th:if="jobs != null" th:text="Results"></h4>
+    <h1 th:text="${#strings.capitalizeWords(blah)}"></h1>
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
+    <table th:each="job : ${jobs}" th:class="job-listing" th:fragment="jobsTable">
+        <tr th:each="jobEntry : ${job}">
+            <td th:text="${jobEntry.key}"></td>
+            <td th:text="${jobEntry.value}"></td>
+        </tr>
+    </table>
 
 </div>
 

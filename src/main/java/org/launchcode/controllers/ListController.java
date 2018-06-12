@@ -14,7 +14,8 @@ import java.util.HashMap;
  */
 @Controller
 @RequestMapping(value = "list")
-public class ListController {
+public class
+ListController {
 
     static HashMap<String, String> columnChoices = new HashMap<>();
 
